@@ -17,7 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
       theFood.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
       theSpace.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
     })
+    window.addEventListener('orientationchange', () => {
+      main.style.height = window.innerHeight + 'px'
+      theFood.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
+      theSpace.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
+    })
   }
+
 
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 160) {
