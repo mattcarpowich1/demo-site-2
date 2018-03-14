@@ -275,6 +275,7 @@ section {
 
 section.the-food {
   background-image: url("./images/gios-3.jpg");
+  background-position: center center;
   height: 75vh; }
 
 section.the-space {

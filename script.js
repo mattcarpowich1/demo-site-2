@@ -7,11 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const closer = document.querySelector('.sidebar-close')
   const mid = document.querySelector('.mid-main')
   const main = document.querySelector('main')
+  const theFood = document.querySelector('.the-food')
+  const theSpace = document.querySelector('.the-space')
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    main.style.height = (screen.height - 60) + 'px'
+    main.style.height = window.innerHeight + 'px'
     window.addEventListener('resize', () => {
-      main.style.height = (screen.height - 60)+ 'px'
+      main.style.height = window.innerHeight + 'px'
+      theFood.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
+      theSpace.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
     })
   }
 
