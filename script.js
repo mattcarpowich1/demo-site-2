@@ -26,6 +26,7 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('scrolly')
     title.classList.remove('show')
   }
+  main.style.height = screen.height + 'px'
   // const yPos = -(window.pageYOffset / mid.dataset.speed)
   // const coords = 'calc(50% + ' + yPos + 'px) 40%'
   // mid.style.backgroundPosition = coords
@@ -41,10 +42,10 @@ closer.addEventListener('click', () => {
   closer.classList.remove('sidebar-close-active')
 })
 
-window.addEventListener('resize', () => {
-  console.log(window.innerHeight)
-  main.style.height = window.innerHeight + 'px'
-})
+// window.addEventListener('resize', () => {
+//   console.log(window.innerHeight)
+//   main.style.height = window.innerHeight + 'px'
+// })
 
 // $('header').each(function(){
 //     var $bgobj = $(this); // assigning the object
