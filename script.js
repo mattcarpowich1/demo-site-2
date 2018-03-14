@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     main.style.height = (screen.height) + 'px'
     window.addEventListener('resize', () => {
-      main.style.height = screen.height + 'px'
+      main.style.height = (screen.height - 60)+ 'px'
     })
   }
 
