@@ -43,7 +43,7 @@ closer.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   console.log(window.innerHeight)
-  main.style.height = window.innerHeight
+  main.style.height = window.innerHeight + 'px'
 })
 
 // $('header').each(function(){
