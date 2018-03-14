@@ -7,6 +7,13 @@ const closer = document.querySelector('.sidebar-close')
 const mid = document.querySelector('.mid-main')
 const main = document.querySelector('main')
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  main.style.height = (screen.height) + 'px'
+  window.addEventListener('resize', () => {
+    main.style.height = screen.height + 'px'
+  })
+}
+
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 160) {
     nav.classList.add('scrolly')
@@ -26,7 +33,6 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('scrolly')
     title.classList.remove('show')
   }
-  main.style.height = screen.height + 'px'
   // const yPos = -(window.pageYOffset / mid.dataset.speed)
   // const coords = 'calc(50% + ' + yPos + 'px) 40%'
   // mid.style.backgroundPosition = coords
