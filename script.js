@@ -5,6 +5,7 @@ const burger = document.querySelector('.burger')
 const sidebar = document.querySelector('aside')
 const closer = document.querySelector('.sidebar-close')
 const mid = document.querySelector('.mid-main')
+const main = document.querySelector('main')
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 160) {
@@ -38,6 +39,11 @@ burger.addEventListener('click', () => {
 closer.addEventListener('click', () => {
   sidebar.classList.remove('sidebar-open')
   closer.classList.remove('sidebar-close-active')
+})
+
+window.addEventListener('resize', () => {
+  console.log(window.innerHeight)
+  main.style.height = window.innerHeight
 })
 
 // $('header').each(function(){
