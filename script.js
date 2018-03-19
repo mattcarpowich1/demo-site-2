@@ -1,85 +1,85 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let once = false
-  const nav = document.querySelector('nav')
-  const title = document.querySelector('h4')
-  const burger = document.querySelector('.burger')
-  const sidebar = document.querySelector('aside')
-  const closer = document.querySelector('.sidebar-close')
-  const mid = document.querySelector('.mid-main')
-  const main = document.querySelector('main')
-  const theFood = document.querySelector('.the-food')
-  const theSpace = document.querySelector('.the-space')
+// document.addEventListener('DOMContentLoaded', () => {
+//   let once = false
+//   const nav = document.querySelector('nav')
+//   const title = document.querySelector('h4')
+//   const burger = document.querySelector('.burger')
+//   const sidebar = document.querySelector('aside')
+//   const closer = document.querySelector('.sidebar-close')
+//   const mid = document.querySelector('.mid-main')
+//   const main = document.querySelector('main')
+//   const theFood = document.querySelector('.the-food')
+//   const theSpace = document.querySelector('.the-space')
 
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    main.style.height = window.innerHeight + 'px'
-    window.addEventListener('resize', () => {
-      main.style.height = window.innerHeight + 'px'
-      theFood.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
-      theSpace.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
-    })
-    window.addEventListener('orientationchange', () => {
-      main.style.height = window.innerHeight + 'px'
-      theFood.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
-      theSpace.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
-    })
-  }
+//   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+//     main.style.height = window.innerHeight + 'px'
+//     window.addEventListener('resize', () => {
+//       main.style.height = window.innerHeight + 'px'
+//       theFood.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
+//       theSpace.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
+//     })
+//     window.addEventListener('orientationchange', () => {
+//       main.style.height = window.innerHeight + 'px'
+//       theFood.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
+//       theSpace.style.height = 'calc(' + window.innerHeight + 'px - 25vh)'
+//     })
+//   }
 
 
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 160) {
-      nav.classList.add('scrolly')
-      nav.classList.remove('hide')
-      title.classList.add('show')
-      // const children = Array.from(burger.children)
-      // children.forEach(node => node.classList.add('burger-row-white'))
-      if (!once) {
-        once = true
-      } 
-    } else {
-      if (once) {
-        nav.classList.add('hide')
-      }
-      // const children = Array.from(burger.children)
-      // children.forEach(node => node.classList.remove('burger-row-white'))
-      nav.classList.remove('scrolly')
-      title.classList.remove('show')
-    }
-    // const yPos = -(window.pageYOffset / mid.dataset.speed)
-    // const coords = 'calc(50% + ' + yPos + 'px) 40%'
-    // mid.style.backgroundPosition = coords
-  })
+//   window.addEventListener('scroll', () => {
+//     if (window.pageYOffset > 160) {
+//       nav.classList.add('scrolly')
+//       nav.classList.remove('hide')
+//       title.classList.add('show')
+//       // const children = Array.from(burger.children)
+//       // children.forEach(node => node.classList.add('burger-row-white'))
+//       if (!once) {
+//         once = true
+//       } 
+//     } else {
+//       if (once) {
+//         nav.classList.add('hide')
+//       }
+//       // const children = Array.from(burger.children)
+//       // children.forEach(node => node.classList.remove('burger-row-white'))
+//       nav.classList.remove('scrolly')
+//       title.classList.remove('show')
+//     }
+//     // const yPos = -(window.pageYOffset / mid.dataset.speed)
+//     // const coords = 'calc(50% + ' + yPos + 'px) 40%'
+//     // mid.style.backgroundPosition = coords
+//   })
 
-  burger.addEventListener('click', () => {
-    sidebar.classList.add('sidebar-open')
-    closer.classList.add('sidebar-close-active')
-  })
+//   burger.addEventListener('click', () => {
+//     sidebar.classList.add('sidebar-open')
+//     closer.classList.add('sidebar-close-active')
+//   })
 
-  closer.addEventListener('click', () => {
-    sidebar.classList.remove('sidebar-open')
-    closer.classList.remove('sidebar-close-active')
-  })
+//   closer.addEventListener('click', () => {
+//     sidebar.classList.remove('sidebar-open')
+//     closer.classList.remove('sidebar-close-active')
+//   })
 
-  // window.addEventListener('resize', () => {
-  //   console.log(window.innerHeight)
-  //   main.style.height = window.innerHeight + 'px'
-  // })
+//   // window.addEventListener('resize', () => {
+//   //   console.log(window.innerHeight)
+//   //   main.style.height = window.innerHeight + 'px'
+//   // })
 
-  // $('header').each(function(){
-  //     var $bgobj = $(this); // assigning the object
+//   // $('header').each(function(){
+//   //     var $bgobj = $(this); // assigning the object
 
-  //     $(window).scroll(function() {
+//   //     $(window).scroll(function() {
 
-  //       // Scroll the background at var speed
-  //       // the yPos is a negative value because we're scrolling it UP!                              
-  //       var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+//   //       // Scroll the background at var speed
+//   //       // the yPos is a negative value because we're scrolling it UP!                              
+//   //       var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
 
-  //       // Put together our final background position
-  //       var coords = '50% '+ yPos + 'px';
+//   //       // Put together our final background position
+//   //       var coords = '50% '+ yPos + 'px';
 
-  //       // Move the background
-  //       $bgobj.css({ backgroundPosition: coords });
+//   //       // Move the background
+//   //       $bgobj.css({ backgroundPosition: coords });
 
-  //     });
+//   //     });
 
-  //   });
-}) 
+//   //   });
+// }) 
