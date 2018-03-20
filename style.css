@@ -129,7 +129,7 @@ aside.sidebar-open {
   justify-content: center;
   align-items: center;
   background-position: center center;
-  background-image: url('./images/gios-1.jpg');
+  background-image: url('./images/gios-1-copy.jpg');
   background-size: cover; 
   z-index: 0;
 }
@@ -248,13 +248,20 @@ nav h4.show {
 }
 
 .logo-image {
-  height: calc(64px + (128 - 64) * (100vw - 320px)/(960-320));
+  height: calc(64px + (96 - 64) * (100vw - 320px)/(960-320));
   width: calc(64px + (128 - 64) * (100vw - 320px)/(960-320));
   width: auto;
   position: absolute;
-  top: 22px;
+  top: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
   left: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
   z-index: 8; }
+
+h3.top-right {
+  position: absolute;
+  top: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
+  right: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
+  z-index: 8;
+}
 
 h1 {
   font-family: "Archivo Narrow", sans-serif;
@@ -387,7 +394,7 @@ input, textarea {
   background-color: #282828;
   border-bottom: 2px solid white;
   color: white;
-  font-size: calc(12px + (20 - 12) * (100vw - 320px)/(960-320));
+  font-size: calc(16px + (20 - 16) * (100vw - 320px)/(960-320));
   font-family: "open-sans-light-italic", sans-serif;
   transition: all .2s ease;
   outline: none; 
@@ -413,7 +420,7 @@ address {
   font-family: "open-sans-light-italic", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: calc(12px + (20 - 12) * (100vw - 320px)/(960-320));
+  font-size: calc(16px + (20 - 16) * (100vw - 320px)/(960-320));
   color: rgba(256, 256, 256, .8); 
 }
 
@@ -424,7 +431,7 @@ h3 {
   font-family: "go-bold-light-italic", sans-serif;
   font-weight: 600;
   font-style: italic;
-  font-size: calc(20px + (24 - 16) * (100vw - 320px)/(960-320)); }
+  font-size: calc(20px + (24 - 20) * (100vw - 320px)/(960-320)); }
 
 @media screen and (min-width: 768px) {
   footer {
