@@ -256,13 +256,6 @@ nav h4.show {
   left: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
   z-index: 8; }
 
-h3.top-right {
-  position: absolute;
-  top: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
-  right: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
-  z-index: 8;
-}
-
 h1 {
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 600;
@@ -432,6 +425,13 @@ h3 {
   font-weight: 600;
   font-style: italic;
   font-size: calc(20px + (24 - 20) * (100vw - 320px)/(960-320)); }
+
+h3.top-right {
+  position: absolute;
+  top: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
+  right: calc(18px + (36 - 18) * (100vw - 320px)/(960-320));
+  z-index: 8;
+}
 
 @media screen and (min-width: 768px) {
   footer {
